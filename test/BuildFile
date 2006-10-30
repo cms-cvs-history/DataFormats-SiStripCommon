@@ -1,0 +1,18 @@
+<use name=FWCore/Framework>
+<use name=FWCore/ParameterSet>
+<use name=FWCore/MessageLogger>
+<use name=DataFormats/SiStripCommon>
+<use name=boost>
+
+<library file="stubs/*.cc" name=testDataFormatsSiStripCommon>
+   <flags SEAL_PLUGIN_NAME="testDataFormatsSiStripCommon">
+</library>
+
+<export>
+  <lib name=testOnlineDBSiStripESSources>
+  <use name=FWCore/Framework>
+  <use name=FWCore/ParameterSet>
+  <use name=FWCore/MessageLogger>
+  <use name=DataFormats/SiStripCommon>
+  <use name=boost>
+<export>
