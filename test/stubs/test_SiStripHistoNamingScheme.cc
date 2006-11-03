@@ -192,23 +192,33 @@ void test_SiStripHistoNamingScheme::beginJob( const edm::EventSetup& setup ) {
       for ( ; ikey != key_types.end(); ikey++ ) {
 	vector<sistrip::Granularity>::const_iterator igran = grans.begin(); 
 	for ( ; igran != grans.end(); igran++ ) {
-	  stringstream ss;
-	  ss << "[test_SiStripHistoNamingScheme::" << __func__ << "]" 
-	     << " Task/KeyType/Gran: " << *itask << "/" << *ikey << "/" << *igran << endl
-	     << "  Task: " << SiStripHistoNamingScheme::task(*itask) << endl
-	     << "  KeyType: " << SiStripHistoNamingScheme::keyType(*ikey) << endl
-	     << "  Gran: " << SiStripHistoNamingScheme::granularity(*igran) << endl;
-	  HistoTitle in( *itask, *ikey, cntr, *igran, 0xFFFF, "SomeInfo" );
-	  string str = SiStripHistoNamingScheme::histoTitle(in);
-	  HistoTitle out = SiStripHistoNamingScheme::histoTitle(str);
-	  ss << "  in: " << endl << in << endl;
-	  ss << "  out: " << endl << out << endl;
-	  ss << "  str: " << str << endl;
-	  LogTrace(mlDqmCommon_) << ss.str();
-	  cntr++;
+	  for ( uint16_t iextra = 0; iextra < 2; iextra++ ) { 
+	    string extra = "";
+	    if ( iextra ) { extra = "SomeInfo"; }
+
+	    stringstream ss;
+	    ss << "[test_SiStripHistoNamingScheme::" << __func__ << "]" 
+	       << " Task/KeyType/Gran/Extra: " << *itask << "/" << *ikey << "/" << *igran << "/" << iextra << endl
+	       << "  Task:      " << SiStripHistoNamingScheme::task(*itask) << endl
+	       << "  KeyType:   " << SiStripHistoNamingScheme::keyType(*ikey) << endl
+	       << "  Gran:      " << SiStripHistoNamingScheme::granularity(*igran) << endl
+	       << "  ExtraInfo: ";
+	    if ( extra == "" ) { ss << "(none)" << endl; }
+	    else { ss << extra << endl; }
+	    
+	    HistoTitle in( *itask, *ikey, cntr, *igran, 0, extra );
+	    string str = SiStripHistoNamingScheme::histoTitle(in);
+	    HistoTitle out = SiStripHistoNamingScheme::histoTitle(str);
+	    ss << "  IN: " << in << endl;
+	    ss << "  STR: " << str << endl;
+	    ss << "  OUT: " << out << endl;
+	    LogTrace(mlDqmCommon_) << ss.str();
+	    cntr++;
+
+	  }
 	}
-      }
-    }      
+      }      
+    }
   }
 
 }
