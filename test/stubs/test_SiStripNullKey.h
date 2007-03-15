@@ -1,5 +1,5 @@
-#ifndef DataFormats_SiStripCommon_test_SiStripFecKey_H
-#define DataFormats_SiStripCommon_test_SiStripFecKey_H
+#ifndef DataFormats_SiStripCommon_test_SiStripNullKey_H
+#define DataFormats_SiStripCommon_test_SiStripNullKey_H
 
 #include "FWCore/Framework/interface/EDAnalyzer.h"
 #include "FWCore/Framework/interface/EventSetup.h"
@@ -7,16 +7,16 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 
 /**
-   @class test_SiStripFecKey 
+   @class test_SiStripNullKey 
    @author R.Bainbridge
-   @brief Simple class that tests SiStripFecKey.
+   @brief Simple class that tests SiStripNullKey.
 */
-class test_SiStripFecKey : public edm::EDAnalyzer {
+class test_SiStripNullKey : public edm::EDAnalyzer {
 
  public:
   
-  test_SiStripFecKey( const edm::ParameterSet& );
-  ~test_SiStripFecKey();
+  test_SiStripNullKey( const edm::ParameterSet& );
+  ~test_SiStripNullKey();
   
   void beginJob( edm::EventSetup const& );
   void analyze( const edm::Event&, const edm::EventSetup& );
@@ -28,5 +28,5 @@ class test_SiStripFecKey : public edm::EDAnalyzer {
   
 };
 
-#endif // DataFormats_SiStripCommon_test_SiStripFecKey_H
+#endif // DataFormats_SiStripCommon_test_SiStripNullKey_H
 
