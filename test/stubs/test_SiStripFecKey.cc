@@ -9,11 +9,12 @@
 #include <string>
 #include <time.h>
 
+using namespace sistrip;
+
 // -----------------------------------------------------------------------------
 // 
 test_SiStripFecKey::test_SiStripFecKey( const edm::ParameterSet& pset ) 
 {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_)
     << "[test_SiStripFecKey::" << __func__ << "]"
     << " Constructing object...";
@@ -22,7 +23,6 @@ test_SiStripFecKey::test_SiStripFecKey( const edm::ParameterSet& pset )
 // -----------------------------------------------------------------------------
 // 
 test_SiStripFecKey::~test_SiStripFecKey() {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_)
     << "[test_SiStripFecKey::" << __func__ << "]"
     << " Destructing object...";
@@ -31,7 +31,6 @@ test_SiStripFecKey::~test_SiStripFecKey() {
 // -----------------------------------------------------------------------------
 // 
 void test_SiStripFecKey::beginJob( const edm::EventSetup& setup ) {
-  using namespace sistrip;
   
   uint32_t cntr = 0;
   uint32_t start = time(NULL);
@@ -187,7 +186,6 @@ void test_SiStripFecKey::beginJob( const edm::EventSetup& setup ) {
 // 
 void test_SiStripFecKey::analyze( const edm::Event& event, 
 				  const edm::EventSetup& setup ) {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_) 
     << "[SiStripFecKey::" << __func__ << "]"
     << " Analyzing run/event "

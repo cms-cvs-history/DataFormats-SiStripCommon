@@ -11,11 +11,12 @@
 #include <string>
 #include <vector>
 
+using namespace sistrip;
+
 // -----------------------------------------------------------------------------
 // 
 test_SiStripHistoTitle::test_SiStripHistoTitle( const edm::ParameterSet& pset )
 {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_)
     << "[test_SiStripHistoTitle::" << __func__ << "]"
     << " Constructing object...";
@@ -24,7 +25,6 @@ test_SiStripHistoTitle::test_SiStripHistoTitle( const edm::ParameterSet& pset )
 // -----------------------------------------------------------------------------
 // 
 test_SiStripHistoTitle::~test_SiStripHistoTitle() {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_)
     << "[test_SiStripHistoTitle::" << __func__ << "]"
     << " Destructing object...";
@@ -33,7 +33,6 @@ test_SiStripHistoTitle::~test_SiStripHistoTitle() {
 // -----------------------------------------------------------------------------
 // 
 void test_SiStripHistoTitle::beginJob( const edm::EventSetup& setup ) {
-  using namespace sistrip;
 
   LogTrace(mlDqmCommon_) 
     << "[SiStripHistoTitle::" << __func__ << "]"
@@ -190,7 +189,6 @@ void test_SiStripHistoTitle::beginJob( const edm::EventSetup& setup ) {
 // 
 void test_SiStripHistoTitle::analyze( const edm::Event& event, 
 					     const edm::EventSetup& setup ) {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_) 
     << "[SiStripHistoTitle::" << __func__ << "]"
     << " Analyzing run/event "

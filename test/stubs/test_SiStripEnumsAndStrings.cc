@@ -9,11 +9,12 @@
 #include <string>
 #include <vector>
 
+using namespace sistrip;
+
 // -----------------------------------------------------------------------------
 // 
 test_SiStripEnumsAndStrings::test_SiStripEnumsAndStrings( const edm::ParameterSet& pset )
 {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_)
     << "[test_SiStripEnumsAndStrings::" << __func__ << "]"
     << " Constructing object...";
@@ -22,7 +23,6 @@ test_SiStripEnumsAndStrings::test_SiStripEnumsAndStrings( const edm::ParameterSe
 // -----------------------------------------------------------------------------
 // 
 test_SiStripEnumsAndStrings::~test_SiStripEnumsAndStrings() {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_)
     << "[test_SiStripEnumsAndStrings::" << __func__ << "]"
     << " Destructing object...";
@@ -31,7 +31,6 @@ test_SiStripEnumsAndStrings::~test_SiStripEnumsAndStrings() {
 // -----------------------------------------------------------------------------
 // 
 void test_SiStripEnumsAndStrings::beginJob( const edm::EventSetup& setup ) {
-  using namespace sistrip;
 
   // sistrip::View
   {
@@ -241,7 +240,6 @@ void test_SiStripEnumsAndStrings::beginJob( const edm::EventSetup& setup ) {
 // 
 void test_SiStripEnumsAndStrings::analyze( const edm::Event& event, 
 					     const edm::EventSetup& setup ) {
-  using namespace sistrip;
   LogTrace(mlDqmCommon_) 
     << "[SiStripEnumsAndStrings::" << __func__ << "]"
     << " Analyzing run/event "
