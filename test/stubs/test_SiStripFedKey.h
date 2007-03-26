@@ -1,4 +1,4 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_SiStripFedKey.h,v 1.2 2007/03/21 08:23:00 bainbrid Exp $
 
 #ifndef DataFormats_SiStripCommon_test_SiStripFedKey_H
 #define DataFormats_SiStripCommon_test_SiStripFedKey_H
@@ -23,10 +23,6 @@ class test_SiStripFedKey : public edm::EDAnalyzer {
   void beginJob( edm::EventSetup const& );
   void analyze( const edm::Event&, const edm::EventSetup& );
   void endJob() {;}
-
- private:
-
-  bool frontEnd_;
   
 };
 
