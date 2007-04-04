@@ -1,5 +1,5 @@
 #include "FWCore/Framework/interface/MakerMacros.h"
-#include "PluginManager/ModuleDef.h"
+#include "FWCore/PluginManager/interface/ModuleDef.h"
 DEFINE_SEAL_MODULE();
 
 #include "DataFormats/SiStripCommon/test/stubs/test_SiStripFecKey.h"
@@ -20,3 +20,5 @@ DEFINE_ANOTHER_FWK_MODULE(test_SiStripEnumsAndStrings);
 #include "DataFormats/SiStripCommon/test/stubs/test_SiStripHistoTitle.h"
 DEFINE_ANOTHER_FWK_MODULE(test_SiStripHistoTitle);
 
+#include "DataFormats/SiStripCommon/test/stubs/test_Template.h"
+DEFINE_ANOTHER_FWK_MODULE(test_Template);
