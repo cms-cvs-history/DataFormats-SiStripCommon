@@ -1,4 +1,4 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_SiStripFecKey.cc,v 1.4 2007/03/21 08:23:00 bainbrid Exp $
 
 #include "DataFormats/SiStripCommon/test/stubs/test_SiStripFecKey.h"
 #include "DataFormats/SiStripCommon/interface/SiStripFecKey.h"
@@ -143,6 +143,7 @@ void test_SiStripFecKey::beginJob( const edm::EventSetup& setup ) {
   SiStripFecKey equal = valid;
   SiStripFecKey equals; 
   equals = valid;
+  SiStripFecKey to_gran(valid,sistrip::CCU_CHAN); 
 
   std::stringstream ss;
 
@@ -155,7 +156,8 @@ void test_SiStripFecKey::beginJob( const edm::EventSetup& setup ) {
      << ">>>> all.path:     " << all << std::endl
      << ">>>> same.path:    " << same << std::endl
      << ">>>> equal.path:   " << equal << std::endl
-     << ">>>> equals.path:  " << equals << std::endl;
+     << ">>>> equals.path:  " << equals << std::endl
+     << ">>>> to_gran.path:  " << to_gran << std::endl;
   
   ss << std::hex
      << ">>>> invalid.key:  " << invalid.key() << std::endl
