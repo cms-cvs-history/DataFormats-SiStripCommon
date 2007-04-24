@@ -1,4 +1,4 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_SiStripHistoTitle.h,v 1.2 2007/03/21 08:23:00 bainbrid Exp $
 
 #ifndef DataFormats_SiStripCommon_test_SiStripHistoTitle_H
 #define DataFormats_SiStripCommon_test_SiStripHistoTitle_H

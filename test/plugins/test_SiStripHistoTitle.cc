@@ -1,6 +1,6 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_SiStripHistoTitle.cc,v 1.3 2007/03/21 08:23:00 bainbrid Exp $
 
-#include "DataFormats/SiStripCommon/test/stubs/test_SiStripHistoTitle.h"
+#include "DataFormats/SiStripCommon/test/plugins/test_SiStripHistoTitle.h"
 #include "DataFormats/SiStripCommon/interface/SiStripEnumsAndStrings.h"
 #include "DataFormats/SiStripCommon/interface/SiStripHistoTitle.h"
 #include "DataFormats/SiStripCommon/interface/SiStripConstants.h"

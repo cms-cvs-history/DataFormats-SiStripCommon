@@ -1,6 +1,6 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_SiStripFedKey.cc,v 1.4 2007/03/21 08:23:00 bainbrid Exp $
 
-#include "DataFormats/SiStripCommon/test/stubs/test_SiStripFedKey.h"
+#include "DataFormats/SiStripCommon/test/plugins/test_SiStripFedKey.h"
 #include "DataFormats/SiStripCommon/interface/SiStripFedKey.h"
 #include "DataFormats/SiStripCommon/interface/SiStripConstants.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"

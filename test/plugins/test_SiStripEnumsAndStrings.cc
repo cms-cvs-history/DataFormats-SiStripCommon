@@ -1,6 +1,6 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_SiStripEnumsAndStrings.cc,v 1.3 2007/03/21 08:23:00 bainbrid Exp $
 
-#include "DataFormats/SiStripCommon/test/stubs/test_SiStripEnumsAndStrings.h"
+#include "DataFormats/SiStripCommon/test/plugins/test_SiStripEnumsAndStrings.h"
 #include "DataFormats/SiStripCommon/interface/SiStripEnumsAndStrings.h"
 #include "DataFormats/SiStripCommon/interface/SiStripConstants.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"

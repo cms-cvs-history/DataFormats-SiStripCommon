@@ -1,6 +1,6 @@
-// Last commit: $Id: $
+// Last commit: $Id: test_Template.cc,v 1.1 2007/04/04 07:35:50 bainbrid Exp $
 
-#include "DataFormats/SiStripCommon/test/stubs/test_Template.h"
+#include "DataFormats/SiStripCommon/test/plugins/test_Template.h"
 #include "DataFormats/SiStripCommon/interface/SiStripConstants.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
 #include <boost/cstdint.hpp>
