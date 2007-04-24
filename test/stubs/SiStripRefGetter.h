@@ -10,7 +10,7 @@
 #include "DataFormats/Common/interface/traits.h"
 #include "DataFormats/Common/interface/DetSet.h"
 #include "DataFormats/Common/interface/Ref.h"
-#include "DataFormats/SiStripCommon/test/SiStripLazyGetter.h"
+#include "DataFormats/SiStripCommon/test/stubs/SiStripLazyGetter.h"
 
 #include "FWCore/Utilities/interface/EDMException.h"
 #include "FWCore/Utilities/interface/GCCPrerequisite.h"
