@@ -40,7 +40,7 @@ namespace edm {
   //
 
     template<typename T, typename C >
-    struct FindRegion : public std::binary_function<const C &, uint32_t, const typename SiStripLazyUnpacker<T>::Record* > {
+    struct FindRegion : public std::binary_function<const C &, uint32_t, const typename SiStripLazyUnpacker<T>::IndexPair* > {
       typedef FindRegion<T,C> self;
       typename self::result_type operator()(typename self::first_argument_type iContainer,  typename self::second_argument_type iIndex) const {
         return &(*(iContainer.begin()+iIndex));
@@ -54,17 +54,17 @@ namespace edm {
     BOOST_CLASS_REQUIRE(T, boost, LessThanComparableConcept);
   public:
 
-    typedef Ref<C, typename SiStripLazyUnpacker<T>::Record, FindRegion<T,C> > ref_type;
+    typedef Ref<C, typename SiStripLazyUnpacker<T>::IndexPair, FindRegion<T,C> > ref_type;
     typedef std::vector<ref_type> collection_type;
 
-    typedef typename SiStripLazyUnpacker<T>::Record const&  const_reference;
+    typedef typename SiStripLazyUnpacker<T>::IndexPair const&  const_reference;
     typedef boost::indirect_iterator<typename collection_type::const_iterator> const_iterator;
     typedef typename collection_type::size_type size_type;
 
     SiStripRefGetter() {}
     
     template <typename THandle>
-      SiStripRefGetter(const THandle& iHandle, const std::vector<det_id_type>& iRegions) : sets_() {
+      SiStripRefGetter(const THandle& iHandle, const std::vector<uint32_t>& iRegions) : sets_() {
         sets_.reserve(iRegions.size());
         for(std::vector<uint32_t>::const_iterator iRegion = iRegions.begin();
 	    iRegion != iRegions.end();
