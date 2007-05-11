@@ -13,6 +13,6 @@
   <use name=DataFormats/SiStripCommon>
   <use name=boost>
   <library file="plugins/*.cc" name=testDataFormatsSiStripCommonPlugins>
-    <flags EDM_PLUGIN=1>
+    <flags SEALPLUGIN=1>
   </library>
 </environment>
