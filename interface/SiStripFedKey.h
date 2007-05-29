@@ -1,4 +1,4 @@
-// Last commit: $Id: $
+// Last commit: $Id: SiStripFedKey.h,v 1.8 2007/05/24 15:27:15 bainbrid Exp $
 
 #ifndef DataFormats_SiStripCommon_SiStripFedKey_H
 #define DataFormats_SiStripCommon_SiStripFedKey_H
@@ -146,7 +146,7 @@ class SiStripFedKey : public SiStripKey {
   bool isInvalid( const sistrip::Granularity& ) const;
   
  private: 
-
+  
   // ---------- Private methods ----------
 
   void initFromValue();
