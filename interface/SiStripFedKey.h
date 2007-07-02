@@ -1,4 +1,4 @@
-// Last commit: $Id: SiStripFedKey.h,v 1.9 2007/06/06 08:32:48 bainbrid Exp $
+// Last commit: $Id: SiStripFedKey.h,v 1.10 2007/06/06 09:09:22 bainbrid Exp $
 
 #ifndef DataFormats_SiStripCommon_SiStripFedKey_H
 #define DataFormats_SiStripCommon_SiStripFedKey_H
@@ -156,6 +156,8 @@ class SiStripFedKey : public SiStripKey {
   
   // ---------- Private member data ----------
 
+ public: //@@ temp!!
+
   /** FED id [0,50-489,invalid]. */
   uint16_t fedId_;  
 
@@ -167,6 +169,8 @@ class SiStripFedKey : public SiStripKey {
 
   /** APV [0,1-2,invalid]. */
   uint16_t fedApv_; 
+
+ private: //@@ temp!!
   
   // Definition of bit field positions for 32-bit key 
   static const uint16_t fedCrateOffset_ = 26;

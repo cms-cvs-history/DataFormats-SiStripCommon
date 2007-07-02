@@ -1,4 +1,4 @@
-// Last commit: $Id: SiStripFecKey.h,v 1.9 2007/06/06 08:32:48 bainbrid Exp $
+// Last commit: $Id: SiStripFecKey.h,v 1.10 2007/06/06 09:09:22 bainbrid Exp $
 
 #ifndef DataFormats_SiStripCommon_SiStripFecKey_H
 #define DataFormats_SiStripCommon_SiStripFecKey_H
@@ -160,6 +160,8 @@ class SiStripFecKey : public SiStripKey {
   
   // ---------- Private member data ----------
 
+ public: //@@ temp!!
+
   /** FEC crate [0,1-4,invalid]. */
   uint16_t fecCrate_; 
 
@@ -180,6 +182,8 @@ class SiStripFecKey : public SiStripKey {
 
   /** APV I2C address [0,32-37,invalid]. */
   uint16_t i2cAddr_;  
+
+ private: //@@ temp!!
   
   // Definition of bit field positions for 32-bit key 
   static const uint16_t fecCrateOffset_ = 29;
