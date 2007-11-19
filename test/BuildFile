@@ -1,19 +1,9 @@
-<environment>
-  <use name=DataFormats/Common>
-  <use name=FWCore/Utilities>
-  <use name=boost>
-  <library file="stubs/*.cc" name=testDataFormatsSiStripCommon>
-  </library>
-</environment>
-
-<environment>
+<library file="plugins/*.cc" name=testDataFormatsSiStripCommonPlugins>
   <use name=FWCore/Framework>
   <use name=FWCore/ParameterSet>
   <use name=FWCore/MessageLogger>
   <use name=DataFormats/SiStripCommon>
   <use name=boost>
-  <library file="plugins/*.cc" name=testDataFormatsSiStripCommonPlugins>
-    <flags EDM_PLUGIN=1>
-  </library>
-</environment>
+  <flags EDM_PLUGIN=1>
+</library>
 
